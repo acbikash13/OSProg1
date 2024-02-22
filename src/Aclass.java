@@ -7,43 +7,9 @@ public class Aclass extends Thread{
         this.count = count;
         this.time_to_sleep  =time;
     }
-
-
-}
-class Bclass extends Thread {
-    protected long time_to_sleep;
-    progState count;
-
-    public Bclass(progState count, long time) {
-        this.count = count;
-        this.time_to_sleep  =time;
-    }
-}
-class Cclass implements Runnable {
-    protected long time_to_sleep;
-    progState count;
-
-    public Cclass(progState count, long time) {
-        this.count = count;
-        this.time_to_sleep  =time;
-    }
-
-
-    @Override
     public void run() {
+        count.incA();
 
     }
-}
-class Dclass implements Runnable {
-    protected long time_to_sleep;
-    progState count;
-    public Dclass(progState count, long time) {
-        this.count = count;
-        this.time_to_sleep  =time;
-    }
 
-    @Override
-    public void run() {
-
-    }
 }
